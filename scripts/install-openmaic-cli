@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+HARNESS_DIR="$REPO_DIR/agent-harness"
+cd "$HARNESS_DIR"
+
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -e . pytest
+
+echo
+echo "Installed cli-anything-openmaic for: $REPO_DIR"
+echo "Wrapper: $REPO_DIR/scripts/openmaic-cli"
+echo "Example: $REPO_DIR/scripts/openmaic-cli --json health"

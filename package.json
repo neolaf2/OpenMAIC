@@ -13,7 +13,13 @@
     "start": "next start",
     "lint": "eslint",
     "check": "prettier . --check",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "cli:install": "./scripts/install-openmaic-cli",
+    "cli": "./scripts/openmaic-cli",
+    "cli:health": "./scripts/openmaic-cli --json health",
+    "cli:server:status": "./scripts/openmaic-cli --json server status",
+    "cli:server:start": "./scripts/openmaic-cli --json server start",
+    "cli:session": "./scripts/openmaic-cli --json session"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.23",

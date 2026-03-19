@@ -61,3 +61,8 @@ next-env.d.ts
 
 # docs
 /docs
+# Python / CLI harness artifacts
+agent-harness/.venv/
+agent-harness/.pytest_cache/
+agent-harness/**/__pycache__/
+agent-harness/*.egg-info/
